@@ -1,0 +1,27 @@
+{
+  "name": "linkey",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"uvicorn main:app --reload\" \"parcel frontend/index.html --public-url /dist\"",
+    "format": "prettier --write --plugin-search-dir=. frontend/**/*"
+  },
+  "author": "Kirill Kiiutin",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-svelte": "^4.0.6",
+    "prettier": "^1.19.1",
+    "prettier-plugin-svelte": "^0.7.0",
+    "sass": "^1.26.3",
+    "svelte-preprocess": "^3.7.1"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "humps": "^2.0.1",
+    "svelte": "^3.20.1"
+  }
+}
