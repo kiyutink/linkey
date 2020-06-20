@@ -64,6 +64,9 @@ def redirect(short_url: str, db=Depends(get_db)):
     link = crud.get_link(db=db, short_url=short_url)
     if link is None:
         return Response(status_code=404)
-    return RedirectResponse(link.original_url)
+    redirect_to = link.original_url
+    if not redirect_to.startswith("http"):
+        redirect_to = "//" + redirect_to
+    return RedirectResponse(redirect_to)
 
 
