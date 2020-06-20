@@ -62,10 +62,10 @@
             });
         }}>
         <Input bind:value={url} />
-        <button>Shorten</button>
+        <button disabled={!url}>Shorten</button>
       </form>
     {:else}
-      <Input value={shortUrl} />
+      <Input value={shortUrl} readonly={true}/>
       <button
         disabled={copied}
         on:click={() => {

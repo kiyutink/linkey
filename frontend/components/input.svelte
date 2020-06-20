@@ -4,7 +4,8 @@
   const onChange = event => {
     dispatch("change", event);
   };
-  export let value = "" + "";
+  export let value = ""
+  export let readonly = false
 </script>
 
 <style lang="scss">
@@ -22,4 +23,4 @@
   }
 </style>
 
-<input type="text" bind:value on:change={onChange} />
+<input type="text" bind:value on:change={onChange} {readonly} />
