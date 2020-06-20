@@ -2,8 +2,8 @@
   import { createEventDispatcher } from "svelte";
   const dispatch = createEventDispatcher();
   const onChange = event => {
-    dispatch("change", event)
-  }
+    dispatch("change", event);
+  };
   export let value = "" + "";
 </script>
 
@@ -22,4 +22,4 @@
   }
 </style>
 
-<input type="text" bind:value on:change={onChange}/>
+<input type="text" bind:value on:change={onChange} />

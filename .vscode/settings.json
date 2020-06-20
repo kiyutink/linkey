@@ -1,5 +1,5 @@
 {
-  "python.pythonPath": "c:\\Users\\kiyut\\Documents\\git\\linkey\\venv\\Scripts\\python.exe",
+  "python.pythonPath": "/Users/kiyutink/.pyenv/versions/3.7.0/bin/python",
   "python.linting.pylintEnabled": true,
   "python.linting.enabled": true
 }

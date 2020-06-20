@@ -50,14 +50,14 @@ def create_link(link: schemas.LinkCreate, db=Depends(get_db)):
     return crud.create_link(db=db, link=link_dict)
 
 
-app.mount("/dist", StaticFiles(directory=os.environ["FRONTEND_SRC"], html=True), name="dist")
-@app.get("/dist")
+app.mount("/new", StaticFiles(directory="dist", html=True), name="new")
+@app.get("/new")
 def add_trailing_slash():
-    return RedirectResponse("/dist/")
+    return RedirectResponse("/new/")
 
 @app.get("/")
 def dist():
-    return RedirectResponse("/dist/")
+    return RedirectResponse("/new/")
 
 @app.get("/{short_url}")
 def redirect(short_url: str, db=Depends(get_db)):
